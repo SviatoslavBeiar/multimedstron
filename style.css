@@ -1,0 +1,158 @@
+/* Base styles (mobile-first) */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffcc00, #ff6699);
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ff3300;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+}
+
+.bio img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px dashed #ff3300;
+}
+
+.bio-text {
+    text-align: center;
+}
+
+.bio-text h2 {
+    font-size: 1.5rem;
+    color: #ff3300;
+    margin-bottom: 1rem;
+}
+
+.bio-text p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-weight: bold;
+    margin-top: auto;
+    text-transform: uppercase;
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+    header {
+        padding: 3rem 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    .bio {
+        flex-direction: row;
+        padding: 3rem 2rem;
+        gap: 3rem;
+        max-width: 800px;
+    }
+
+    .bio img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .bio-text {
+        text-align: left;
+        max-width: 500px;
+    }
+
+    .bio-text h2 {
+        font-size: 2rem;
+    }
+
+    .bio-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .bio {
+        max-width: 1000px;
+        padding: 4rem 3rem;
+    }
+
+    .bio-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .bio-text p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Special pseudo-elements */
+h1::before {
+    content: "The Legendary";
+    display: block;
+    font-size: 0.6em;
+    color: #ff6600;
+}
+
+.bio-text p::before {
+    content: "🏆 Professional Meme Lord & Coder Extraordinaire 🏆 ";
+    display: block;
+    font-size: 1em;
+    color: #ff0066;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
